@@ -5,17 +5,9 @@ class Solution {
             return false;
         }
         while(x>0){
-            n=x%10;
-            rev=rev*10+n;
+            rev=(rev*10)+(x%10);
             x=x/10;
         }
-        System.out.println(rev);
-        if(rev==check){
-            return true;
-        }
-        if(rev!=check){
-            return false;
-        }
-        return false;
+        return rev==check;
     }
 }
